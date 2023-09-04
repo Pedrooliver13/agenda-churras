@@ -1,5 +1,5 @@
 // Reducers
-import { Barbercue, InvitedPerson } from 'reducers/barbecues/reducer';
+import { Barbecue, InvitedPerson } from 'reducers/barbecues/reducer';
 
 export enum ActionTypes {
   CREATE_NEW_BARBECUE = 'CREATE_NEW_BARBECUE',
@@ -30,8 +30,8 @@ interface RemoveInvitedActionParams {
 type RemoveInvitedActionResponse = RemoveInvitedActionParams;
 
 export const createnNewBarbecueAction = (
-  newBarbecue: Barbercue
-): ActionResponse<Barbercue> => {
+  newBarbecue: Barbecue
+): ActionResponse<Barbecue> => {
   return {
     type: ActionTypes.CREATE_NEW_BARBECUE,
     payload: {

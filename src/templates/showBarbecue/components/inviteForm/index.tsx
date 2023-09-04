@@ -12,12 +12,12 @@ import { Button, Input } from 'components/core';
 import { useBarbecueContext } from 'contexts/useBarbecueContext';
 
 // Reducers
-import { Barbercue } from 'reducers/barbecues/reducer';
+import { Barbecue } from 'reducers/barbecues/reducer';
 
 // Styles
 import * as Styled from './styles';
 
-const addNewInvitedValidationSchema = (data?: Barbercue) =>
+const addNewInvitedValidationSchema = (data?: Barbecue) =>
   zod
     .object({
       name: zod

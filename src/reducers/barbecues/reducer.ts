@@ -4,12 +4,12 @@ import { produce } from 'immer';
 // Reducers
 import { ActionTypes } from './action';
 
-export interface Barbercue {
+export interface Barbecue {
   id: string;
   description: string;
   date: string;
   observation?: string;
-  inviteds: Array<any>;
+  inviteds: Array<InvitedPerson>;
   minValue: number;
   maxValue: number;
 }
@@ -21,7 +21,7 @@ export interface InvitedPerson {
 }
 
 interface BarbecueState {
-  barbecues: Barbercue[];
+  barbecues: Barbecue[];
 }
 
 export const barbecueReducers = (state: BarbecueState, action: any) => {

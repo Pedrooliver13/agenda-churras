@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 // Reducers
-import { Barbercue, barbecueReducers } from 'reducers/barbecues/reducer';
+import { Barbecue, barbecueReducers } from 'reducers/barbecues/reducer';
 import {
   createnNewBarbecueAction,
   removeBarbecueByIdAction,
@@ -30,7 +30,7 @@ interface BarbecueContextProviderProps {
 }
 
 export type BarbecueContextProps = {
-  barbecues: Array<Barbercue>;
+  barbecues: Array<Barbecue>;
   createNewBarbecue: (data: CreateBarbecueFormData) => void;
   removeBarbecueById: (id: string) => void;
   addNewInvited: (barbecueId: string, data: AddInvitedPersonFormData) => void;
@@ -58,7 +58,7 @@ const BarbecueContextProvider = ({
   const createNewBarbecue = (data: CreateBarbecueFormData): void => {
     const id = String(new Date().getTime());
 
-    const newBarbecue: Barbercue = {
+    const newBarbecue: Barbecue = {
       ...data,
       id,
       inviteds: [],
