@@ -22,6 +22,7 @@ const addNewInvitedValidationSchema = (data?: Barbercue) =>
     .object({
       name: zod
         .string()
+        .trim()
         .min(1, 'Favor preencher o campo descrição.')
         .max(15, 'Ultrapassou o máximo de 15 caracteres!'),
       value: zod.number({

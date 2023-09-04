@@ -19,6 +19,7 @@ const newBarbecueValidationSchema = zod
   .object({
     description: zod
       .string()
+      .trim()
       .min(1, 'Favor preencher o campo descrição.')
       .max(30, 'Descrição ultrapassou o máximo de 30 caracteres.'),
     date: zod
