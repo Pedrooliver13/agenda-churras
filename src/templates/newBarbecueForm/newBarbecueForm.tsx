@@ -30,11 +30,11 @@ const newBarbecueValidationSchema = zod
       ),
     minValue: zod.coerce
       .number({
-        invalid_type_error: 'Favor Adicionar um valor.',
+        invalid_type_error: 'Favor adicionar um valor válido.',
       })
       .min(1, 'Favor adicionar um valor.'),
     maxValue: zod.number({
-      invalid_type_error: 'Favor Adicionar um valor.',
+      invalid_type_error: 'Favor adicionar um valor válido.',
     }),
     observation: zod.string(),
   })
@@ -100,6 +100,7 @@ export const NewBarbecueForm = (): ReactElement => {
             placeholder="ex: 20,00 (SEM refrigerante)"
             error={errors?.minValue?.message}
             required
+            step="any"
             {...register('minValue', {
               valueAsNumber: true,
             })}
@@ -111,6 +112,7 @@ export const NewBarbecueForm = (): ReactElement => {
             placeholder="ex: 50,00 (COM refrigerante)"
             error={errors?.maxValue?.message}
             required
+            step="any"
             {...register('maxValue', {
               valueAsNumber: true,
             })}

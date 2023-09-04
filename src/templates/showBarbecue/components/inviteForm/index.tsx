@@ -25,7 +25,7 @@ const addNewInvitedValidationSchema = (data?: Barbercue) =>
         .min(1, 'Favor preencher o campo descrição.')
         .max(15, 'Ultrapassou o máximo de 15 caracteres!'),
       value: zod.number({
-        invalid_type_error: 'Favor adicionar um valor.',
+        invalid_type_error: 'Favor adicionar um valor válido.',
       }),
     })
     .superRefine((arg, ctx) => {
@@ -89,6 +89,7 @@ export const InviteForm = (): ReactElement => {
         placeholder="ex: 20,00"
         error={errors?.value?.message}
         required
+        step="any"
         {...register('value', {
           valueAsNumber: true,
         })}

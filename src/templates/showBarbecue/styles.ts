@@ -41,7 +41,6 @@ export const InviteHeader = styled.header`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: -20px;
-  margin-bottom: 10px;
   gap: 20px;
 
   svg {
