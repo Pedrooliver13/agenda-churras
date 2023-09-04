@@ -9,7 +9,7 @@ const ShowBarbecueById = (): ReactElement => {
   return (
     <>
       <Head>
-        <title>Criar um novo churrasco</title>
+        <title>Churras da trinca - Visualizar Churrasco.</title>
       </Head>
 
       <ShowBarbecue />
