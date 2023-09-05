@@ -15,7 +15,7 @@ import {
 interface CreateBarbecueFormData {
   description: string;
   date: string;
-  obsevationw?: string;
+  obsevation?: string;
   minValue: number;
   maxValue: number;
 }
