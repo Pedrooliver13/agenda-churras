@@ -1,2 +1,2 @@
 // Components
-export { Input } from 'components/core/input/input';
+export { Input } from 'components/core/Input/input';
