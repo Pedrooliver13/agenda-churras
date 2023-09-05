@@ -28,6 +28,7 @@ export const InputContainer = styled.div`
 
   .error {
     display: block;
+    padding: 0.5rem;
     color: ${({ theme }) => theme.colors.red};
   }
 `;

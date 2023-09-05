@@ -25,10 +25,12 @@ const newBarbecueValidationSchema = zod
     date: zod
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, 'Data enviada no formato errado.')
-      .refine(
-        (dateValue) => new Date(dateValue) > new Date(),
-        'Data não pode ser no passado.'
-      ),
+      .refine((dateValue) => {
+        const currentDate = new Date(dateValue);
+        currentDate.setDate(currentDate.getDate() + 1);
+
+        return currentDate > new Date();
+      }, 'Data não pode ser no passado.'),
     minValue: zod.coerce
       .number({
         invalid_type_error: 'Favor adicionar um valor válido.',
@@ -90,6 +92,7 @@ export const NewBarbecueForm = (): ReactElement => {
             id="date"
             label="Data:"
             type="date"
+            min={new Date().toISOString().split('T')[0]}
             error={errors?.date?.message}
             required
             {...register('date')}
