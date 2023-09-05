@@ -1,6 +1,6 @@
 // Packages
 import Link from 'next/link';
-import { ReactElement, useEffect, useMemo } from 'react';
+import { ReactElement, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import {
   Users as UsersIcon,
