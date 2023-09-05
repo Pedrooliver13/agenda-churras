@@ -5,6 +5,9 @@ import {
   CurrencyCircleDollar as CurrencyCircleDollarIcon,
 } from 'phosphor-react';
 
+// Reducers
+import { InvitedPerson } from 'reducers/barbecues/reducer';
+
 // Utils
 import { formatCurrency, getDateFormated } from 'utils';
 
@@ -15,7 +18,7 @@ interface CardProps {
   id: string;
   description: string;
   date: string;
-  inviteds: Array<any>;
+  inviteds: Array<InvitedPerson>;
 }
 
 export const Card = ({
